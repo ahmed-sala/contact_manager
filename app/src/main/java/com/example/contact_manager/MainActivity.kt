@@ -27,32 +27,35 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        Log.d("MainActivity", "onCreate called")
+        shoLogMessage("onCreate")
+
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d("MainActivity", "onStart called")
+        shoLogMessage("onStart")
     }
     override fun onResume() {
         super.onResume()
-        Log.d("MainActivity", "onResume called")
+        shoLogMessage("onResume")
     }
     override fun onPause() {
         super.onPause()
-        Log.d("MainActivity", "onPause called")
+        shoLogMessage("onPause")
     }
     override fun onStop() {
         super.onStop()
-        Log.d("MainActivity", "onStop called")
+        shoLogMessage("onStop")
     }
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("MainActivity", "onDestroy called")
+        shoLogMessage("onDestroy")
     }
     override fun onRestart() {
         super.onRestart()
-        Log.d("MainActivity", "onRestart called")
+        shoLogMessage("onRestart")
     }
-
+    private fun shoLogMessage(message: String) {
+        Log.d("Activity Life Cycle", message)
+    }
 }
