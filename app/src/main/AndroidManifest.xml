@@ -12,9 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Contact_manager">
         <activity
+            android:name=".SecondTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirstTaskActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecoendActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

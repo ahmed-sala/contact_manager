@@ -10,31 +10,23 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var buttonNav:Button
-    private lateinit var implicitNav:Button
+    private lateinit var firstTaskBut:Button
+    private lateinit var SecondTaskBut:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-        buttonNav = findViewById(R.id.navigate_but_first)
-        implicitNav = findViewById(R.id.implicit_nav)
-        buttonNav.setOnClickListener {
-            val intent = Intent(this, SecoendActivity::class.java)
+
+        firstTaskBut = findViewById(R.id.first_button)
+        SecondTaskBut = findViewById(R.id.second_button)
+        firstTaskBut.setOnClickListener {
+            val intent = Intent(this, FirstTaskActivity::class.java)
             startActivity(intent)
         }
-        //Add a share button that uses an implicit intent to share a message via available apps
-        implicitNav.setOnClickListener {
-            val shareIntent = Intent(Intent.ACTION_SEND).apply {
-                type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, "Testing implicit intent")
-            }
-            startActivity(Intent.createChooser(shareIntent, "Share via"))
+        SecondTaskBut.setOnClickListener {
+            val intent = Intent(this, SecondTaskActivity::class.java)
+            startActivity(intent)
         }
+
         Log.d("MainActivity", "onCreate called")
     }
 

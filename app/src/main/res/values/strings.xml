@@ -47,4 +47,15 @@
     <string name="welcome_to_the_second_activity">Welcome to the Second Activity</string>
     <string name="welcome_the_lucky_user">Welcome The Lucky User</string>
     <string name="share_text">Share</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_which_task">Choose Which Task</string>
+    <string name="first_task">First Task</string>
+    <string name="second_task">Second Task</string>
+    <string name="back">back To Home</string>
+    <string name="ahmed_salah">Ahmed Salah</string>
+    <string name="ahmed_salah_image">Ahmed Salah Image</string>
+    <string name="contact_notes">Contact Notes</string>
+    <string name="save_contact">Save Contact</string>
+    <string name="textview">TextView</string>
 </resources>
